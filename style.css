@@ -169,7 +169,7 @@ img {
 .home {
     position: relative;
     row-gap: 5rem;
-    padding: 4rem 0 5rem;
+    padding: 5rem 0 5rem;
 }
 
 .home-data {
@@ -311,7 +311,7 @@ img {
         bottom: 25%;
     }
 
-    .about__container {
+    .about-container {
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
         text-align: initial;
@@ -367,7 +367,7 @@ img {
 
     .home-img {
         width: 400px;
-        bottom: 10%;
+        bottom: -5%;
     }
 
     .about-container {
