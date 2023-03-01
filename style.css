@@ -1,0 +1,146 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root {
+    --header-height: 3rem;
+    --font-semi: 600;
+    /*===== Colores =====*/
+    /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
+    /* HSL color mode */
+    --hue-color: 224;
+    --first-color: hsl(var(--hue-color), 89%, 60%);
+    --second-color: hsl(var(--hue-color), 56%, 12%);
+    /*===== Fuente y tipografia =====*/
+    --body-font: 'Poppins', sans-serif;
+    --big-font-size: 2rem;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: .938rem;
+    --smaller-font-size: .75rem;
+    /*===== Margenes =====*/
+    --mb-2: 1rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+    /*===== z index =====*/
+    --z-back: -10;
+    --z-fixed: 100;
+}
+
+@media screen and (min-width: 968px) {
+    :root {
+        --big-font-size: 3.5rem;
+        --h2-font-size: 2rem;
+        --normal-font-size: 1rem;
+        --smaller-font-size: .875rem;
+    }
+}
+
+/*===== BASE =====*/
+*, ::before, ::after{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 3rem 0 0 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.938rem;
+    color: hsl(224, 56%, 12%);
+}
+
+h1, h2, p{
+    margin: 0;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*===== LAYOUT =====*/
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
+}
+
+.grid{
+    max-width: 1024px;
+    display: grid;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/*===== NAV =====*/
+.nav{
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 767px) {
+    .nav-menu{
+        position: fixed;
+        top: 3rem;
+        right: -100%;
+        width: 80%;
+        height: 100%;
+        padding: 2rem;
+        background-color: hsl(224, 56%, 12%);
+        transition: 0.5s;
+    }
+}
+
+.nav-item{
+    margin-bottom: 2rem;
+}
+
+.nav-link{
+    position: relative;
+    color: #fff;
+}
+
+.nav-link:hover{
+    position: relative;
+}
+
+.nav-link:hover::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 0.18rem;
+    left: 0;
+    top: 2rem;
+    background-color: hsl(224, 89%, 60%);
+}
+
+.nav-logo{
+    color: hsl(224, 56%, 12%);
+}
+
+.nav-toggle{
+    color: hsl(224, 56%, 12%);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
