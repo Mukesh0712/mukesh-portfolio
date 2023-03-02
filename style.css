@@ -1,27 +1,8 @@
 /* GOOGLE FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
-/*===== VARIABLES CSS =====*/
+/* VARIABLES CSS */
 :root {
-    --header-height: 3rem;
-    --font-semi: 600;
-    /*===== Colores =====*/
-    /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
-    /* HSL color mode */
-    --hue-color: 224;
-    --first-color: hsl(var(--hue-color), 89%, 60%);
-    --second-color: hsl(var(--hue-color), 56%, 12%);
-    /*===== Fuente y tipografia =====*/
-    --body-font: 'Poppins', sans-serif;
-    --big-font-size: 2rem;
-    --h2-font-size: 1.25rem;
-    --normal-font-size: .938rem;
-    --smaller-font-size: .75rem;
-    /*===== Margenes =====*/
-    --mb-2: 1rem;
-    --mb-4: 2rem;
-    --mb-5: 2.5rem;
-    --mb-6: 3rem;
     /*===== z index =====*/
     --z-back: -10;
     --z-fixed: 100;
@@ -36,7 +17,7 @@
     }
 }
 
-/*===== BASE =====*/
+/* BASE */
 *,
 ::before,
 ::after {
@@ -76,7 +57,7 @@ img {
     display: block;
 }
 
-/*===== LAYOUT =====*/
+/* LAYOUT */
 .header {
     width: 100%;
     position: fixed;
@@ -94,7 +75,7 @@ img {
     margin-right: 1rem;
 }
 
-/*===== NAV =====*/
+/* NAV */
 .nav {
     height: 3rem;
     display: flex;
@@ -149,7 +130,7 @@ img {
     cursor: pointer;
 }
 
-/*Active menu*/
+/* ACTIVE MENU */
 .active::after {
     position: absolute;
     content: '';
@@ -160,12 +141,12 @@ img {
     background-color: hsl(224, 89%, 60%);
 }
 
-/*=== Show menu ===*/
+/* SHOW MENU */
 .show {
     right: 0;
 }
 
-/*===== HOME =====*/
+/* HOME */
 .home {
     position: relative;
     row-gap: 5rem;
@@ -177,7 +158,8 @@ img {
 }
 
 .home-title {
-    font-size: 2rem;
+    font-size: 3rem;
+    margin-top: 2.5rem;
     margin-bottom: 2.5rem;
 }
 
@@ -193,7 +175,7 @@ img {
 .home-social-icon {
     width: max-content;
     margin-bottom: 1rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: hsl(224, 56%, 12%);
 }
 
@@ -216,7 +198,7 @@ img {
     width: 360px;
 }
 
-/*BUTTONS*/
+/* BUTTONS */
 .button {
     display: inline-block;
     background-color: hsl(224, 89%, 60%);
@@ -231,7 +213,7 @@ img {
     box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
 }
 
-/*===== About ===== */
+/* ABOUT  */
 .section-title {
     position: relative;
     font-size: 1.25rem;
@@ -276,7 +258,7 @@ img {
     border-radius: .5rem;
 }
 
-/* ===== SKILLS =====*/
+/* SKILLS */
 .skills-container {
     row-gap: 2rem;
     text-align: center;
@@ -343,7 +325,7 @@ img {
     border-radius: .5rem;
 }
 
-/* ===== WORK =====*/
+/* WORK */
 .work-container {
     row-gap: 2rem;
 }
@@ -362,7 +344,7 @@ img {
     transform: scale(1.1);
 }
 
-/* ===== CONTACT =====*/
+/* CONTACT */
 .contact-input {
     width: 100%;
     font-size: 0.938rem;
@@ -383,8 +365,36 @@ img {
     margin-left: auto;
 }
 
+/* FOOTER */
+.footer {
+    background-color: hsl(224, 56%, 12%);
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    padding: 2rem 0;
+}
 
-/* ===== MEDIA QUERIES=====*/
+.footer-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-social {
+    margin-bottom: 2rem;
+}
+
+.footer-icon {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0 1rem;
+}
+
+.footer-copy {
+    font-size: 0.875rem;
+}
+
+
+/* MEDIA QUERIES */
 @media screen and (max-width: 320px) {
     .home {
         row-gap: 2rem;
@@ -526,7 +536,7 @@ img {
     }
 
     .home {
-        padding: 10rem 0 2rem;
+        padding: 5rem 0 2rem;
         margin-bottom: 90px;
     }
 
